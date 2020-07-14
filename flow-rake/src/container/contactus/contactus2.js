@@ -94,7 +94,6 @@ export default class ContactUs2 extends Component {
         toastr.options.showDuration = 100
         toastr.options.hideDuration = 500
         toastr.options.onShown = function () {
-          console.log(response);
           console.log('EmailSent!', response.status, response.text);
         }
         toastr.success('Email sent!')
