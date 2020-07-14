@@ -89,7 +89,7 @@ export default class ContactUs2 extends Component {
       emailAddress: emailAddress,
       feedback: feedback
     }
-    emailjs.send('default_service', 'template', templateParams, 'user_ggKWmS2aAAENBBJXgJrUl')
+    emailjs.send('default_service', 'template', templateParams)
       .then(function (response) {
         toastr.options.showDuration = 100
         toastr.options.hideDuration = 500
