@@ -9,20 +9,20 @@ const styles = theme => ({
     width: 830,
     flexDirection: 'column',
     padding: 10,
-  }  
+  }
 });
 
 function Careers(props) {
   const { classes, theme } = props;
-    return (
-      <Card className={classes.card}>
-        <div>
-            Current job openings will be posted here. <br/> <br/>
-            Please feel free to send your resume to <a href="mailto:info@novelcath.com?subject=Resume%20Submitted%20">info@novelcath.com</a> <br /> <br/>
-            Thank you for your interest! <br/>            
-        </div>
-        </Card>
-    );
+  return (
+    <Card className={classes.card}>
+      <div>
+        Current job openings will be posted here. <br /> <br />
+        Please feel free to send your resume to <a href="mailto:flowrake.mn@gmail.com?subject=Resume%20Submitted%20">flowrake.mn@gmail.com</a> <br /> <br />
+        Thank you for your interest! <br />
+      </div>
+    </Card>
+  );
 }
 
 Careers.propTypes = {

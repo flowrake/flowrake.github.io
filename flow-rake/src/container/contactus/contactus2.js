@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { TextField, Button, Card } from '@material-ui/core';
-import * as emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import toastr from 'toastr';
 
 const styles = theme => ({
@@ -90,7 +90,7 @@ export default class ContactUs2 extends Component {
       feedback: feedback
     }
     emailjs.send('default_service', 'template', templateParams)
-      .then(function (response) {
+      .then((response) => {
         toastr.options.showDuration = 100
         toastr.options.hideDuration = 500
         toastr.options.onShown = function () {
