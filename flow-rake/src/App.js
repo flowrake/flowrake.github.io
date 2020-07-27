@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './container/header/header';
-import Navbar from './container/header/navbar';
 import Footernb from './container/footer/footernb';
 import { BrowserRouter } from 'react-router-dom';
 import Body from './container/index';
-import uc from '../src/container/header/underconstruct.jpg';
 import { Grid } from '@material-ui/core';
 import Footer from './container/footer/footer';
 
@@ -17,21 +14,8 @@ class App extends Component {
       <BrowserRouter>
         <Grid container justify="center">
           <div className="App">
-            <header>
-              <Header />
-            </header>
-
-            <Paper className="paperRoot" elevation={1}>
-              <Navbar />
-            </Paper>
-            <br></br>
-
             <body className="App-body">
-              {//<Paper className="paperRoot" elevation={1}>  
-              }
               <Body className="App-body" env={this.props.env} />
-              {//</Paper>
-              }
             </body>
             <br></br>
 

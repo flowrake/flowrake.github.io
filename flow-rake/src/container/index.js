@@ -11,7 +11,7 @@ class Body extends Component {
     render() {
         return (
             <Grid container justify="center">
-                <div    >
+                <div>
                     <Route path="/" exact component={Home} />
                     <Route path="/Home" component={Home} />
                     <Route path="/ContactUs" component={ContactUs2} />
