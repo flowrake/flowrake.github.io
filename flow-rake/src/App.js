@@ -4,7 +4,7 @@ import Footernb from './container/footer/footernb';
 import { BrowserRouter } from 'react-router-dom';
 import Body from './container/index';
 import { Grid } from '@material-ui/core';
-import Footer from './container/footer/footer';
+
 
 import Paper from '@material-ui/core/Paper';
 

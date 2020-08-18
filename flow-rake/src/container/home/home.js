@@ -1,3 +1,5 @@
+import { Link }  from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -9,22 +11,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import logo from './FlowRakeLogo.jpg';
+import product from './Closeup-251x300.jpg';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -32,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+    padding: theme.spacing(2, 0, 1),
   },
   heroButtons: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(2),
   },
   cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   card: {
     height: '100%',
@@ -54,11 +43,14 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
+    padding: theme.spacing(3),
   },
+  photo: {
+    height: 250,
+    width: 200,
+  }
 }));
 
-const cards = [1, 2];
 
 export default function Home() {
   const classes = useStyles();
@@ -66,69 +58,57 @@ export default function Home() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <br></br>
-      <AppBar position="relative">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-          {<img src="../FlowRakeLogo.png" />}
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <main>
-        {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
+          {<img src={logo} className="photo" alt="logo" />}
             <Typography variant="h6" align="center" color="textSecondary" paragraph>
-              Catching potentials before they become problems.
+              Catching potentials before they become problems!
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
-                    About Us
-                  </Button>
+                  <Link to="/Details">
+                    <Button variant="contained" color="primary" src="details.js">
+                      Details
+                    </Button>
+                  </Link>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Contact Us
+                  <Button variant="contained" color="primary" href="https://www.usabluebook.com/search?searchterm=flowrake" target="_blank">
+                    Buy Now
                   </Button>
                 </Grid>
               </Grid>
             </div>
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="\FlowRake.png"
-                    title="FlowRake"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+
+        <div>
+          <Container className={classes.cardGrid} maxWidth="md">
+            <Card className={classes.card}>
+              <CardContent className={classes.cardContent}>
+                {<img src={product} className="photo" alt="logo" />}
+                <br></br>
+                <Typography paragraph>
+                  The FlowRake is a device designed to protect employees and extend equipment life. It's main purpose is the removal of non-dispersible matters such as feminine products, baby wipes, etc.
+                  <br></br>
+                  <br></br>
+                  The FlowRake can be installed for use as pretreatment to wastewater treatment facilities and installation should be made on isolated lift stations. The FlowRake is intended for non-pressurized lines and should be installed on influent gravity lines.
+                  <br></br>
+                  <br></br>
+                  Once installed, the FlowRake must be maintained regularly and is serviced from outside the lift stations wet well and without entry. The safety of employees always comes first.  
+                  <br></br>
+                  <br></br>
+                  The FlowRake can be installed for use as pretreatment to wastewater treatment facilities and installation should be made on isolated lift stations. The FlowRake is intended for non-pressurized lines and should be installed on influent gravity lines.   
+                  <br></br>
+                  <br></br>
+                  The FlowRake can be installed for use as pretreatment to wastewater treatment facilities and installation should be made on isolated lift stations. The FlowRake is intended for non-pressurized lines and should be installed on influent gravity lines.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Container>
+        </div>
       </main>
     </React.Fragment>
   );
