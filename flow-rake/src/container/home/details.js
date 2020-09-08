@@ -84,7 +84,7 @@ export default function Home() {
       <CssBaseline />
       <main>
         <div className={classes.heroContent}>
-          <Container maxWidth="md">
+          <Container maxWidth="sm">
             {<img src={logo} className="photo" alt="logo" />}
             <Typography variant="h6" align="center" color="textSecondary" paragraph>
               Catching potentials before they become problems!

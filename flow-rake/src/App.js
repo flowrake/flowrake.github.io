@@ -12,6 +12,9 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        </head>
         <Grid container justify="center">
           <div className="App">
             <body className="App-body">
@@ -24,7 +27,7 @@ class App extends Component {
                 <Footernb />
               </Paper>
               <br></br>
-              Flowrake © Year | Address | Phone
+              Flowrake © 2020 | Address | (218)-820-4219
         <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
             </footer>
           </div>

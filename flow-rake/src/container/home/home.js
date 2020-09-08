@@ -15,13 +15,18 @@ import Container from '@material-ui/core/Container';
 import logo from './FlowRakeLogo.jpg';
 import product from './Closeup-251x300.jpg';
 
+/**
+ * TODO: change padding to fix mobile view
+ * TODO: change details header to match home page
+ */
+
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(2, 0, 1),
+    padding: theme.spacing(2, 0, 4, 10),
   },
   heroButtons: {
     marginTop: theme.spacing(2),
@@ -46,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   photo: {
-    height: 250,
-    width: 200,
+    height: '100%',
+    width: '100%',
   }
 }));
 
