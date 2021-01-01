@@ -52,7 +52,21 @@
   align-content: center;
 }
 
+.player-wrapper {
+  width: auto; 
+  height: auto;
+}
+.react-player {
+  padding-top: 56.25%;
+  position: relative; 
+}
+
+.react-player > div {
+  position: absolute;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

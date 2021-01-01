@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+          <meta name="viewport" content="width=600, initial-scale=1, maximum-scale=1.5"></meta>
         </head>
         <Grid container justify="center">
           <div className="App">

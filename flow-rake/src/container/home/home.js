@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(2, 0, 4, 10),
+    padding: theme.spacing(8, 0, 6),
   },
   heroButtons: {
     marginTop: theme.spacing(2),
@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   photo: {
-    height: '100%',
-    width: '100%',
+    height: 250,
+    width: 200,
   }
 }));
 
@@ -103,9 +103,6 @@ export default function Home() {
                   <br></br>
                   <br></br>
                   Once installed, the FlowRake must be maintained regularly and is serviced from outside the lift stations wet well and without entry. The safety of employees always comes first.  
-                  <br></br>
-                  <br></br>
-                  The FlowRake can be installed for use as pretreatment to wastewater treatment facilities and installation should be made on isolated lift stations. The FlowRake is intended for non-pressurized lines and should be installed on influent gravity lines.   
                   <br></br>
                   <br></br>
                   The FlowRake can be installed for use as pretreatment to wastewater treatment facilities and installation should be made on isolated lift stations. The FlowRake is intended for non-pressurized lines and should be installed on influent gravity lines.

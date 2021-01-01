@@ -16,9 +16,12 @@ import ReactPlayer from "react-player";
 import logo from './FlowRakeLogo.jpg';
 
 function Video() {
+  const classes = useStyles();
+
   return (
-    <div>
+    <div className={classes.videoWrapper}>
       <ReactPlayer
+        width="100%"
         url="https://www.youtube.com/watch?v=Vk_W2iufffQ"
       />
     </div>
@@ -47,11 +50,11 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   heroButtons: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(2),
   },
   cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   card: {
     height: '100%',
@@ -71,6 +74,14 @@ const useStyles = makeStyles((theme) => ({
   photo: {
     height: 250,
     width: 200,
+  },
+  videoWrapper: {
+    width: 'auto', // Reset width
+    height: 'auto', // Reset height
+  },
+  video: {
+    paddingTop: '56.25%', // Percentage ratio for 16:9
+    position: 'relative', 
   }
 }));
 
@@ -112,10 +123,9 @@ export default function Home() {
           <Container className={classes.cardGrid} maxWidth="md">
             <Card className={classes.card}>
               <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  FlowRake Information
-                  <Video></Video>
-                </Typography>
+                <Video></Video>
+                <br></br>
+                <br></br>
                 <Typography paragraph>
                   A waste capturing device used for catching and retaining nondispersible articles which are discharged from a sewer conduit to prevent these articles from
                   interfering with the proper operation of a sanitary lift station. More particularly, the device
