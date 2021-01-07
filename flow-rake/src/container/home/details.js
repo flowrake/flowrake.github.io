@@ -15,19 +15,6 @@ import Container from '@material-ui/core/Container';
 import ReactPlayer from "react-player";
 import logo from './FlowRakeLogo.jpg';
 
-function Video() {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.videoWrapper}>
-      <ReactPlayer
-        width="100%"
-        url="https://www.youtube.com/watch?v=Vk_W2iufffQ"
-      />
-    </div>
-  )
-}
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -123,21 +110,33 @@ export default function Home() {
           <Container className={classes.cardGrid} maxWidth="md">
             <Card className={classes.card}>
               <CardContent className={classes.cardContent}>
-                <Video></Video>
-                <br></br>
-                <br></br>
+                <h3>FLOWRAKE Specifications</h3>
                 <Typography paragraph>
-                  A waste capturing device used for catching and retaining nondispersible articles which are discharged from a sewer conduit to prevent these articles from
-                  interfering with the proper operation of a sanitary lift station. More particularly, the device
-                  includes a mount that is extended over a discharge pipe and includes a peg extendable
-                  into the discharge pipe. The mount supports the FLOWRAKE assembly that is
-                  positioned below the discharge pipe and extends generally horizontally therefrom.
-                  The mount includes a grip for removing the device from the pipe as well as a
-                  rod socket, which therein a threaded rod or bolt may be threaded, that extends in
-                  an opposite direction from the rake and abuts the wall to retain the rake in the proper
-                  orientation. As fluid flows outwardly from the pipe, any non-dispersible articles such as
-                  wet wipes and the like are captured by the FLOWRAKE and held thereon until the rake
-                  is removed for cleaning.
+                A waste capturing device used for catching and retaining nondispersible articles which are discharged from a sewer conduit to prevent these articles from
+                interfering with the proper operation of a sanitary lift station. More particularly, the device
+                includes a mount that is extended over a discharge pipe and includes a peg extendable
+                into the discharge pipe. The mount supports the FLOWRAKE assembly that is
+                positioned below the discharge pipe and extends generally horizontally therefrom.
+                The mount includes a grip for removing the device from the pipe as well as a
+                rod socket, which therein a threaded rod or bolt may be threaded, that extends in
+                an opposite direction from the rake and abuts the wall to retain the rake in the proper
+                orientation. As fluid flows outwardly from the pipe, any non-dispersible articles such as
+                wet wipes and the like are captured by the FLOWRAKE and held thereon until the rake
+                is removed for cleaning.
+                </Typography>
+                <Typography paragraph>
+                <b>Standard sizes are available in (.119) stainless steel:</b> <br></br>
+                4-inch FLOWRAKE can attach to pipe sizes from 2 to 4 inch. <br></br>
+                6-inch FLOWRAKE can attach to pipe sizes from 4 to 6 inch. <br></br>
+                8-inch FLOWRAKE can attach to pipe sizes from 6 to 8 inch. <br></br>
+                *Larger sizes are available for quote.
+                </Typography>
+                <h3>Mounting and Removal</h3>
+                <Typography paragraph>
+                A 3/8-inch hole is drilled into the topside of the pipe approximately 1+1/2 inch from its end with a minimum of three
+                inches of exposed pipe for proper mounting. The FLOWRAKE is then lowered by use of an extension pole and hook
+                and fitting the peg inside of the previously drilled hole. Removal is accomplished by simply lifting the rake from its
+                resting mount with extension pole and hook.
                 </Typography>
               </CardContent>
             </Card>
