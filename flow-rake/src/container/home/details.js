@@ -14,6 +14,8 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import ReactPlayer from "react-player";
 import logo from './FlowRakeLogo.jpg';
+import product1 from './FlowrakeSmall.JPG';
+import product2 from './FlowrakeLarge.JPG';
 
 function Copyright() {
   return (
@@ -54,13 +56,22 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     flexGrow: 1,
   },
+  divFlexRow: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    margin: 10,
+    padding: 10
+  },
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
   photo: {
-    height: 250,
-    width: 200,
+    height: 'auto',
+    width: '100%',
+    margin: 10,
+    padding: 10
   },
   videoWrapper: {
     width: 'auto', // Reset width
@@ -111,6 +122,7 @@ export default function Home() {
             <Card className={classes.card}>
               <CardContent className={classes.cardContent}>
                 <h3>FLOWRAKE Specifications</h3>
+                <div className={classes.divFlexRow}>
                 <Typography paragraph>
                 A waste capturing device used for catching and retaining nondispersible articles which are discharged from a sewer conduit to prevent these articles from
                 interfering with the proper operation of a sanitary lift station. More particularly, the device
@@ -124,13 +136,20 @@ export default function Home() {
                 wet wipes and the like are captured by the FLOWRAKE and held thereon until the rake
                 is removed for cleaning.
                 </Typography>
+                {<img src={product1} className="photo" alt="logo" />}
+                </div>
+                <div className={classes.divFlexRow}>
+                {<img src={product2} className="photo" alt="logo" />}
                 <Typography paragraph>
+                <br></br>
+                <br></br>
                 <b>Standard sizes are available in (.119) stainless steel:</b> <br></br>
                 4-inch FLOWRAKE can attach to pipe sizes from 2 to 4 inch. <br></br>
                 6-inch FLOWRAKE can attach to pipe sizes from 4 to 6 inch. <br></br>
                 8-inch FLOWRAKE can attach to pipe sizes from 6 to 8 inch. <br></br>
                 *Larger sizes are available for quote.
                 </Typography>
+                </div>
                 <h3>Mounting and Removal</h3>
                 <Typography paragraph>
                 A 3/8-inch hole is drilled into the topside of the pipe approximately 1+1/2 inch from its end with a minimum of three
